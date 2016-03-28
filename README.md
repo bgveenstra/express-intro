@@ -88,7 +88,7 @@
     ];
   ```
 
-1.  To have this data be accessible, we'll need to set up a route to serve it. Add an `app.get` method for the path `/api/albums`.  Inside the new route, use `res.json(albums)` to respond with a JSON object containing all the albums from our albums variable.
+1.  To have this data be accessible, we'll need to set up a route to serve it. Add an `app.get` method for the path `/api/albums`.  Inside the new route, use `res.json(albums)` to respond with some JSON containing all the albums from our albums variable.
 
   > Restart your server, and you should see our albums when you use postman to request the `http://localhost:3000/api/albums` URL.  You could also try using curl: `curl -X GET http://localhost:3000/api/albums` or just your browser.
 
@@ -114,7 +114,7 @@
 
 3. Next edit `app.js` to run the same ajax call as above and console log the data.  Remember to put your ajax call inside the handler for the document ready event: `$(document).on('ready', function() {})`. Consider moving the success handling function definition outside the ajax call, since it's about to get more complicated!
 
-3. Once you have that, edit `app.js` to display this data on your `index.html` page using jQuery.  Decide how you want it to look.  You might also find it useful to edit `index.html`!
+3. Once you have that, edit `app.js` to display this data on your `index.html` page using jQuery.  Decide how you want it to look.  **Hint:** You might also find it useful to edit `index.html`!
 
 4. Restart your server and refresh the page. You should see a list of album titles on the page.
 
@@ -124,7 +124,7 @@ At this point, `server.js` and our client-side files (`index.html`, `app.js`, an
 
 Conveniently, we have a server set up already! Let's make a route to serve our `index.html`.  We're just going to serve the index on the route GET `/` for now.
 
-1. First let's be sure we follow the proper file location structure. This isn't 100% necessary, but it's a good convention and will help a lot when organizing larger projects.  Move `index.html` into a new `views` directory. (Create the directory first.) 
+1. First let's be sure we follow a good convention for file location and directory structure. This will help a lot when organizing larger projects.  Move `index.html` into a new `views` directory. (Create the directory first.) 
 
 _A good express file tree structure_:
 
@@ -197,7 +197,7 @@ We're making a weird app. Albums and taquerias.  Treat your senses.
 
 1. In your `app.js` file, write a jQuery ajax request to get the taqueria data. When the response comes back, display all the taqueria names above the albums on your site's root page (localhost:3000/).  
 
-  <details><summary> Want an ajax call hint? Click here!</summary>
+  <details><summary> Want a reminder of the ajax call structure? Click here!</summary>
     ```js
     $.ajax({
       method: 'GET', 
